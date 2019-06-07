@@ -8,7 +8,7 @@ const isAnagram = require('../src/anagram');
 */
 
 test('isAnagram function exists', () => {
-  // Complete here
+
 });
 
 test('"cinema" is an anagram of "iceman"', () => {
@@ -78,12 +78,14 @@ test('Should be null', () => {
 // toBeFalsy
 test('Should be falsy', () => {
   const user = 'Jeff';
-  expect(functions.checkValue(user)).toBeFalsy('Tefqs');
+  expect(functions.checkValue(user)).not.toMatch('Jefff');
 });
 
 // toEqual
 test('User should be Marc Antoine object', () => {
-  // Complete here
+  // const user = { firstName: 'Marc' };
+  // user['lastName'] = 'Antoine';
+  // expect(functions.createUser.user).toBe(user);
 });
 
 // Less than and greater than
@@ -91,25 +93,28 @@ test('Should be under 1000', () => {
   const load1 = 500;
   const load2 = 500;
   // Complete here
+  expect(load1).toBeLessThan(1000);
+  expect(load2).toBeLessThan(1000);
+
+
 });
 
 // Regex
 test('There is no I in the word team', () => {
-  // Complete here
+  expect('team').not.toMatch(/i/);
 });
 
 // Arrays
 test('Admin should be in usernames', () => {
   usernames = ['john', 'karen', 'admin'];
-  // Complete here
+  expect(usernames).toContain('admin');
 });
-
 // Working with async data
 
 // Async Await since ES7
-test('User fetched name should be Geoffrey Beauny', async () => {
+test('User fetched name should be Leanne Graham', async () => {
   const data = await functions.fetchUser();
-  // Complete here
+  expect(data).toHaveProperty('name', 'Leanne Graham');
 });
 
 /*
@@ -125,9 +130,11 @@ test('reverseString function exists', () => {
 });
 
 test('String reverses', () => {
-  // Complete here
+  const user = 'jeff';
+  expect(reverseString(user)).toBe('ffej');
 });
 
 test('String reverses with uppercase', () => {
-  // Complete here
+  const user = 'JEFF';
+  expect(reverseString(user).toLowerCase(user)).toBe('ffej');
 });
