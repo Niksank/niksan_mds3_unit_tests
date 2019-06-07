@@ -8,7 +8,7 @@ const isAnagram = require('../src/anagram');
 */
 
 test('isAnagram function exists', () => {
-
+  expect(isAnagram).toBeDefined();
 });
 
 test('"cinema" is an anagram of "iceman"', () => {
@@ -83,9 +83,9 @@ test('Should be falsy', () => {
 
 // toEqual
 test('User should be Marc Antoine object', () => {
-  // const user = { firstName: 'Marc' };
-  // user['lastName'] = 'Antoine';
-  // expect(functions.createUser.user).toBe(user);
+  const user = { firstName: 'Marc' };
+  user['lastName'] = 'Antoine';
+  expect(functions.createUser(user)).toEqual(user);
 });
 
 // Less than and greater than
@@ -126,7 +126,7 @@ test('User fetched name should be Leanne Graham', async () => {
 const reverseString = require('../src/reversestr');
 
 test('reverseString function exists', () => {
-  // Complete here
+  expect(reverseString).toBeDefined();
 });
 
 test('String reverses', () => {
