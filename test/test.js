@@ -12,15 +12,18 @@ test('isAnagram function exists', () => {
 });
 
 test('"cinema" is an anagram of "iceman"', () => {
-  // Complete here
+  const value = 'cinema';
+  expect(isAnagram(value, 'iceman')).toBeTruthy()
 });
 
 test('"Dormitory" is an anagram of "dirty room##"', () => {
-  // Complete here
+  const value = 'Dormitory';
+  expect(isAnagram(value, 'dirty room##')).toBeTruthy()
 });
 
 test('"Hello" is NOT an anagram of "Aloha"', () => {
-  // Complete here
+  const value = 'Hello';
+  expect(isAnagram(value, 'Aloha')).toBeFalsy()
 });
 
 /*
@@ -38,23 +41,21 @@ describe('Checking Names', () => {
 
   test('User is Jeff', () => {
     const user = 'Jeff';
-    //Check if the user is Jeff
-    // Complete here
+    expect(functions.checkValue(user)).toMatch('Jeff');
   });
 
   test('User is Karen', () => {
     const user = 'Karen';
-    //Check if the user is Karen
-    // Complete here
+    expect(functions.checkValue(user)).toMatch('Karen');
   });
 });
 
 test('Adds 2 + 2 to equal 4', () => {
-  // Complete here
+  expect(functions.add(2, 2)).toBe(4);
 });
 
 test('Adds 2 + 2 to NOT equal 5', () => {
-  // Complete here
+  expect(functions.add(2, 2)).not.toBe(5);
 });
 
 /*
@@ -71,12 +72,13 @@ test('Adds 2 + 2 to NOT equal 5', () => {
 // toBeFalsy matches anything that an if statement treats as false
 
 test('Should be null', () => {
-  // Complete here
+  expect(functions.isNull()).toBeNull();
 });
 
 // toBeFalsy
 test('Should be falsy', () => {
-  // Complete here
+  const user = 'Jeff';
+  expect(functions.checkValue(user)).toBeFalsy('Tefqs');
 });
 
 // toEqual
